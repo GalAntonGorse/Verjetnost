@@ -968,7 +968,7 @@ $$\sum_{l = m}^\infty P(X = m) = \sum_{l = m} ^\infty \binom{l - 1}{k - 1} q^{l 
   in 
   $$X_2 = \{X = k\} \cap \{\text{Banach je prazno škatlico potegnil iz desnega žepa}\}.$$
   Če želimo, da se zgodi prvi od teh dveh dogodkov, mora Banach kaditi $(n + (n - k) + 1)$-to 
-  cigareto in pri tem točno $(n - 1)$-tič seči v levi žep.
+  cigareto in pri tem točno $(n + 1)$-tič seči v levi žep.
   To spominja na negativno binomsko porazdelitev, zato lahko zapišemo 
   $$P(X_2) = \binom{(2n - k + 1) - 1}{(n + 1) - 1} \left(\frac{1}{2}\right)^{n + 1} \left(\frac{1}{2}\right)^{n - k} = \binom{2n - k}{n} \left(\frac{1}{2}\right)^{2n - k + 1}.$$
   Zaradi simetrije je 
@@ -1511,14 +1511,12 @@ za vse možne nabore $(x_1, x_2, \dots, x_n)$.
   Od tod sledi $c_1 c_2 = 1$ in imamo neodvisnost.
 \end{dokaz}
 
-\begin{opomba}
   Dokaz velja popolnoma enako, če sta $\underline{X}$ in $\underline{Y}$ neodvisna vektorja.
-\end{opomba}
 
-\begin{dokaz}
+\begin{opomba}
   V prejšnjem koraku smo množili neskončni vsoti. Ali smo to smeli narediti?
   K temu vprašanju se bomo še vrnili. 
-\end{dokaz}
+\end{opomba}
 
 \begin{zgled}
   Denimo, da je v družini $N \sim \mathrm{Po} (\lambda)$.
@@ -1711,7 +1709,7 @@ torej $\bigcup_{j \in J} I_j = I$ in $I_j \cap I_j' = \emptyset$ za $j \neq j'$,
 ali velja $\sum_{i \in I} a_i = \sum_{j \in J} \sum_{i \in I_j} a_i$?
 
 \begin{lema}
-  Če so vsi členi $a_i$ nenegativni, potem sta dve vrsti vsoti ali končni in enaki ali pa ne obstajata.
+  Če so vsi členi $a_i$ nenegativni, potem sta dve vsoti ali končni in enaki ali pa ne obstajata.
 \end{lema}
 
 \begin{lema}
@@ -2644,7 +2642,7 @@ Sedaj si oglejmo naslednji primer.
 \end{izrek}
 
 \begin{dokaz}
-  Dokaz sledi naravvnost iz linearnosti pričakovane vrednosti.
+  Dokaz sledi naravnost iz linearnosti pričakovane vrednosti.
 \end{dokaz}
 
 Ko računamo z matrikami, sledimo dogovoru, da je $\underline{X}$ stolpec.
@@ -2904,7 +2902,7 @@ slučajne spremenljivke zapakiramo v funkcijo.
 Vemo, da je $E(f(X)) = \sum_{k = 0} ^\infty f(x) P(X = k)$. 
 Vzemimo $f(x) = s^k$ za $s \in [-1, 1]$.
 Potem dobimo 
-$$E(f(X)) = E(s^X) = \sum_{k = 0} ^\infty s^k P(X = k) \cdot G_X(s).$$
+$$E(f(X)) = E(s^X) = \sum_{k = 0} ^\infty s^k P(X = k) = G_X(s).$$
 
 \begin{zgled}
   Naj bo $X \sim \mathrm{Bin} (n, p)$. Potem je 
@@ -2920,7 +2918,7 @@ $$E(f(X)) = E(s^X) = \sum_{k = 0} ^\infty s^k P(X = k) \cdot G_X(s).$$
   Spomnimo se, da je $(1 - x)^{-a} = \sum_{k = 0} ^\infty \frac{(a)_k}{k!} x^k$
   za $|x| < 1$. Računamo 
   \begin{align*}
-    G_X (s) &= \sum_{k = m} ^\infty s^k \binom{k - 1}{m  1} p^m \cdot q^{k - m}\\
+    G_X (s) &= \sum_{k = m} ^\infty s^k \binom{k - 1}{m - 1} p^m \cdot q^{k - m}\\
     &= (ps)^m \sum_{k = 0} ^\infty \binom{m + k - 1}{m - 1} q^k s^k\\
     &= (ps)^m \cdot \sum_{k = 0} ^\infty \frac{(m)_k}{k!} q^k s^k\\
     &= (ps)^m \cdot (1 - qs)^{-m}\\
@@ -3423,7 +3421,7 @@ Sedaj delimo levo in desno stran z $(n + 1) (1 - af_0)$ in dobimo
 Izpeljeli smo rekurzivno enačbo za $g_n$ -- tej rekurziji se reče Panjerjeva rekurzija.
 
 \begin{opomba}
-  Paujerjeva rekurzija se dejansko pogosto uporablja v zavarovalništvu.
+  Panjerjeva rekurzija se dejansko pogosto uporablja v zavarovalništvu.
   Verjetnosti $f_0, f_1, \dots$ so približno znane iz prakse, za $p_0, p_1, \dots$
   pa se predpostavi katero od znanih porazdelitev, tipično Poissonovo.
 \end{opomba}
