@@ -115,7 +115,7 @@
   coltext=black,
   colback=white, 
   fontupper=\rmfamily,
-  parbox=false,
+  %parbox=false,
   noparskip,
   sharp corners,
   boxrule=-1pt,  % width of the box' edges
@@ -135,8 +135,8 @@
   ]}
 {\endtcolorbox}
 
-\newenvironment{definicija}{\begin{defi}\begin{noticeB}}{%
-    \end{noticeB}\end{defi}}
+\newenvironment{definicija}{\begin{noticeB}\begin{defi}}{%
+    \end{defi}\end{noticeB}}
 
 {\theoremstyle{remark}
 \newtheorem*{opomba}{Opomba}
@@ -178,7 +178,7 @@
   breakable,
   coltext=black, 
   fontupper=\rmfamily,
-  parbox=false,
+  %parbox=false,
   noparskip,
   sharp corners,
   boxrule=-1pt,  % width of the box' edges
@@ -269,18 +269,13 @@
 \newcommand{\ve}[1]{\overrightarrow{#1}}
 \newcommand{\vectors}[2]{\vec{{#1}_1},\vec{{#1}_2}, \dots \vec{{#1}_{#2}}}
 \newcommand{\scalars}[2]{{#1}_1, {#1}_2, \dots, {#1}_{#2}}
-\newcommand{\im}{\mathrm{im}\,}
-\newcommand{\rang}{\mathrm{\text{rang}}\,}
+\DeclareMathOperator{\rang}{rang}
+\DeclareMathOperator{\im}{im}
 \newcommand{\isom}{\stackrel{\sim}{=}}
 \newcommand{\quot}[2]{{\raisebox{0.1em}{$#1$}\left/\raisebox{-0.2em}{$#2$}\right.}}
 \newcommand{\sprod}[2]{\left\langle {#1},{#2} \right\rangle}
-\newcommand{\cl}{\mathrm{Cl}\,}
-\newcommand{\inte}{\mathrm{Int}\,}
-\newcommand{\intem}{\mathrm{int}\,}
-\newcommand{\meja}{\mathrm{Meja}\,}
-\newcommand{\vari}{\mathrm{var}\,}
-\newcommand{\cov}{\mathrm{cov}\,}
-\DeclareMathOperator{\di}{d\!}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\vari}{var}
 
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace\hspace{0pt}}m{#1}}
 
